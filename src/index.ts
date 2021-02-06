@@ -13,6 +13,7 @@ app.use('/api/user', authRoutes);
 mongoose.connect(process.env.DB_CONNECT || '127.0.0.1:27017', { useNewUrlParser: true }, () => {
   console.log('✅ Connected to DB');
 });
+
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
