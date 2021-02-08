@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import User from '../model/User';
-import { registerValidation } from '../validations';
+import User from '../../model/User';
+import { registerValidation } from '../../validations';
 import bcrypt from 'bcryptjs';
-const router = Router();
+const registerRouter = Router();
 
-router.post('/register', async (req, res) => {
+registerRouter.post('/register', async (req, res) => {
   // Validate User
   const errors = registerValidation(req.body);
   if (errors) {
@@ -37,4 +37,4 @@ router.post('/register', async (req, res) => {
   }
 });
 
-export default router;
+export default registerRouter;
