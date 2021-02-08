@@ -2,9 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import authRoutes from './routes/auth';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+dotenv.config();
 // Middlewares
 app.use(cors());
 app.use(express.json());
