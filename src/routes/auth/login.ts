@@ -28,7 +28,7 @@ LoginRouter.post('/login', async (req, res) => {
     return res.header('auth-token', token).send(token);
   } else console.error('"SECRET" environment variable is not defined');
 
-  return res.status(501).send('unknown error');
+  return res.status(501).send('unknown  error');
 });
 
 export default LoginRouter;
