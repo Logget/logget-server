@@ -24,7 +24,7 @@ LoginRouter.post('/login', async (req, res) => {
   }
 
   if (process.env.SECRET) {
-    const token = jwt.sign({ user: user._id }, process.env.SECRET);
+    const token = jwt.sign({ id: user._id }, process.env.SECRET);
     return res.header('auth-token', token).send(token);
   } else console.error('"SECRET" environment variable is not defined');
 
